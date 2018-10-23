@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Audio Recorder</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  </head>
+  <body >
+    <div class="container" >
+      <h1>Web Audio Recorder (16K, 16bit only)</h1>
+      <hr>
+      <div class="container-fluid full-width" >
+		<div class="row-fluid">
+			<label class="col-sm-3">Parameters</label>
+			<label class="col-sm-3">ID</label>
+			<span class="col-sm-6"  id="buffer-size-text" >
+				<input id="userId" name="userId" type="text"/>
+			</span >	
+		</div>
+		
+		<div class="row-fluid">
+          <label class="col-sm-3">Script File</label>
+		  <span class="col-sm-3"><span id="fileName">FileName</span></span>
+			<span class="col-sm-6"  id="buffer-size-text" >
+				<input id="file1" name="file1" type="file"/>
+			</span >	
+        </div>
+		
+		
+		<div class="row-fluid">
+			<input id="totalContentsCount" name="totalContentsCount" type="hidden"/>
+			<span class="col-sm-10" >&nbsp;</span>
+			<span class="col-sm-2" id="totalContentsCountStr" ></span>
+		</div>
+		
+		<div class="row-fluid">
+			<input id="contentsId" name="contentsId" type="hidden"/>
+			<input id="contentsVal" name="contentsVal" type="hidden"/>
+			<span class="col-sm-12" id="contentsList" style="overflow-y:scroll; width:100%; height:300px; padding:10px;display: none;background-color: PapayaWhip;">
+			</span>
+		</div>
+		
+		
+		<div class="row-fluid">
+          <span class="col-sm-3">
+			<span id="recording" class="text-danger hidden"><strong>RECORDING</strong></span>&nbsp; <span id="time-display">00:00</span>
+		  </span>
+          <span class="col-sm-3">
+            <button id="record" class="btn btn-danger">RECORD</button>
+            <button id="cancel" class="btn btn-default hidden">CANCEL</button>
+          </span>
+          <span class="col-sm-6">
+			<span id="date-time" class="text-info"></span>
+		  </span>
+        </div>
+		<div class="row-fluid">
+			<span class="col-sm-12"><h3>Recordings</h3></span>
+			 
+		</div>
+		
+		<div class="row-fluid">
+				<div class="col-sm-12" id="recording-list"></div>
+		</div>
+		
+		
+		
+		
+		<!--
+		<div class="form-group" style="border:4px dashed">
+          <label class="col-sm-3 control-label">Parameters</label>
+          <div class="col-sm-2">
+            <p>ID</p>
+          </div>
+          <div id="buffer-size-text" class="col-sm-2">
+            <input id="userId" name="userId" type="text"/>
+          </div>
+			<div class="col-sm-2" >&nbsp;</div>
+        </div>
+		
+		
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Script File</label>
+          <div class="col-sm-2">
+            <div id="fileName">FileName</div>
+          </div>
+          <div id="buffer-size-text" class="col-sm-2">
+            <input id="file1" name="file1" type="file"/>
+          </div>
+        </div>
+		
+		<div class="form-group">
+			<input id="totalContentsCount" name="totalContentsCount" type="hidden"/>
+			<div class="col-sm-11" >&nbsp;</div>
+			<div class="col-sm-1" id="totalContentsCountStr" ></div>
+		</div>
+		
+		<div class="form-group">
+			<input id="contentsId" name="contentsId" type="hidden"/>
+			<input id="contentsVal" name="contentsVal" type="hidden"/>
+			<div class="col-sm-12" id="contentsList" style="overflow-y:scroll; width:100%; height:300px; padding:10px;display: none;background-color: PapayaWhip;">
+			</div>
+		</div>
+		
+        <div class="form-group">
+          <div class="col-sm-3 control-label"><span id="recording" class="text-danger hidden"><strong>RECORDING</strong></span>&nbsp; <span id="time-display">00:00</span></div>
+          <div class="col-sm-3">
+            <button id="record" class="btn btn-danger">RECORD</button>
+            <button id="cancel" class="btn btn-default hidden">CANCEL</button>
+          </div>
+          <div class="col-sm-6"><span id="date-time" class="text-info"></span></div>
+        </div>
+      </div>
+      <hr>
+      <h3>Recordings</h3>
+      <div id="recording-list"></div>
+	  -->
+	  
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="js/WavAudioEncoder.js"></script>
+    <script src="js/EncoderDemo.js"></script>
+  </body>
+</html>
